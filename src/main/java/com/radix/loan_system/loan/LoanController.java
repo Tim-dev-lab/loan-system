@@ -3,6 +3,7 @@ package com.radix.loan_system.loan;
 import com.radix.loan_system.loan.dto.LoanRequestDto;
 import com.radix.loan_system.loan.dto.LoanResponseDto;
 import com.radix.loan_system.loan.dto.mapper.LoanMapper;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class LoanController {
 
     @PostMapping
     public ResponseEntity<LoanResponseDto> createLoan(
-            @RequestBody LoanRequestDto request) {
+            @Valid @RequestBody LoanRequestDto request) {
 
         Loan loan = loanService.createLoan(
                 request.getLoanAmount(),

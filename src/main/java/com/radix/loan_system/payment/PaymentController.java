@@ -3,6 +3,7 @@ package com.radix.loan_system.payment;
 import com.radix.loan_system.payment.dto.PaymentRequestDto;
 import com.radix.loan_system.payment.dto.PaymentResponseDto;
 import com.radix.loan_system.payment.dto.mapper.PaymentMapper;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ public class PaymentController {
 
     @PostMapping
     public ResponseEntity<PaymentResponseDto> makePayment(
-            @RequestBody PaymentRequestDto request) {
+            @Valid @RequestBody PaymentRequestDto request) {
 
         Payment payment = paymentService.processPayment(
                 request.getLoanId(),
