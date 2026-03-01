@@ -45,14 +45,14 @@ All requests/responses are JSON. DTO validation is applied — invalid inputs re
 ### Request: 
 
 **POST** `/loans`
-#### Postman
+#### Postman Request
 ```json
 {
   "loanAmount": 800,
   "term": 3
 }
 ```
-#### curl
+#### curl Request
 ```bash
 
 curl -X POST http://localhost:8080/loans \
@@ -82,12 +82,12 @@ curl -X POST http://localhost:8080/loans \
 ### Request:
 
 **GET** `/loans/{loanId}`
-#### Postman
+#### Postman Request
 ```
 http://localhost:8080/loans/{loanId}
 ```
 
-#### curl
+#### curl Request
 ```bash
 
 curl -X GET http://localhost:8080/loans/{loanId}
@@ -160,6 +160,11 @@ Invalid amount
   "timestamp": "2026-03-01T12:16:00"
 }
 ```
+## Notes
+
+- Payments reduce the remaining loan balance.
+- The loan term is informational and does not automatically adjust based on payments.
+- Amortization or schedule recalculation can be added as a future enhancement.
 
 # Testing Flow
 
