@@ -1,4 +1,4 @@
-package com.radix.loan_system.loan.dto.mapper;
+package com.radix.loan_system.loan.mapper;
 
 import com.radix.loan_system.loan.Loan;
 import com.radix.loan_system.loan.dto.LoanResponseDto;

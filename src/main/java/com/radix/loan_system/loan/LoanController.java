@@ -2,7 +2,7 @@ package com.radix.loan_system.loan;
 
 import com.radix.loan_system.loan.dto.LoanRequestDto;
 import com.radix.loan_system.loan.dto.LoanResponseDto;
-import com.radix.loan_system.loan.dto.mapper.LoanMapper;
+import com.radix.loan_system.loan.mapper.LoanMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

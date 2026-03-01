@@ -1,4 +1,4 @@
-package com.radix.loan_system.payment.dto.mapper;
+package com.radix.loan_system.payment.mapper;
 
 
 import com.radix.loan_system.payment.Payment;
